@@ -90,7 +90,7 @@ const Header = (props) => {
         !userName ? (
           <div>
         <Login onClick={handleAuth}>Login</Login>
-        <Login onClick={handleDemo}>Demo Login</Login>
+        <Login onClick={handleDemo}>Demo</Login>
         </div>
         ):(
         <>
@@ -239,7 +239,7 @@ a{
 const Login = styled.a`
   background-color: rgba(0, 0, 0, 0.6);
   padding: 8px 16px;
-  margin-left:25px;
+  margin-left:10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   border: 1px solid #f9f9f9;
@@ -249,6 +249,12 @@ const Login = styled.a`
     background-color: #f9f9f9;
     color: #000;
     border-color: transparent;
+  }
+
+  @media(max-width: 399px){
+    margin-left:2px;
+    letter-spacing: 0;
+    border : 0.5px solid #f9f9f9;
   }
 `;
 
